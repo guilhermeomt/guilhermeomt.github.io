@@ -11,7 +11,7 @@
   </head>
 
   <body>
-    <div class="home">
+    <section class="home">
       <aside class="navigation">
         <a class="logo" href="#">
           <img src="assets/guilherme.svg">
@@ -24,10 +24,10 @@
             <a class="nav-item disabled">
               <li>Blog</li>
             </a>
-            <a href="#" class="nav-item gradient-hover">
+            <a class="nav-item disabled">
               <li>Portfólio</li>
             </a>
-            <a href="#" class="nav-item gradient-hover">
+            <a href="#contato" class="nav-item gradient-hover">
               <li>Contato</li>
             </a>
           </ul>
@@ -35,7 +35,8 @@
             <a href="https://www.instagram.com/guilhermeomt" target="_blank" rel="noopener noreferrer">
               <li><i class="fa fa-instagram fa-2x gradient-hover"></i></li>
             </a>
-            <a href="https://www.linkedin.com/in/guilherme-tavares-3b65541a4/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/guilherme-tavares-3b65541a4/" target="_blank"
+              rel="noopener noreferrer">
               <li><i class="fa fa-linkedin fa-2x gradient-hover"></i></li>
             </a>
             <a href="https://github.com/guilhermeomt" target="_blank" rel="noopener noreferrer">
@@ -119,15 +120,19 @@
           <path d="M688.15 786.002C687.046 786.055 686.195 786.992 686.247 788.095L687.104 806.075C687.156 807.178 688.093 808.03 689.197 807.977C690.3 807.925 691.152 806.988 691.099 805.884L690.338 789.903L706.32 789.141C707.423 789.089 708.275 788.152 708.222 787.048C708.17 785.945 707.233 785.093 706.129 785.146L688.15 786.002ZM831.485 805.384C832.147 803.497 832.146 803.497 832.145 803.496C832.145 803.496 832.144 803.496 832.143 803.495C832.141 803.495 832.138 803.494 832.135 803.493C832.129 803.491 832.121 803.488 832.111 803.484C832.09 803.477 832.061 803.467 832.023 803.454C831.948 803.429 831.839 803.392 831.696 803.346C831.41 803.252 830.992 803.119 830.447 802.954C829.356 802.625 827.759 802.17 825.705 801.66C821.6 800.639 815.668 799.397 808.321 798.492C793.632 796.684 773.253 796.224 750.495 801.624L751.419 805.516C773.609 800.25 793.494 800.697 807.832 802.462C814.999 803.344 820.771 804.555 824.741 805.542C826.726 806.035 828.259 806.472 829.29 806.783C829.805 806.939 830.195 807.063 830.453 807.147C830.581 807.19 830.677 807.222 830.739 807.243C830.77 807.253 830.793 807.261 830.807 807.266C830.814 807.268 830.818 807.27 830.821 807.271C830.822 807.271 830.823 807.271 830.824 807.272C830.824 807.272 830.823 807.272 830.824 807.272C830.823 807.271 830.823 807.271 831.485 805.384ZM750.495 801.624C728.332 806.884 714.911 804.559 706.257 800.386C697.421 796.126 693.516 790.088 689.59 786.52L686.9 789.48C690.022 792.318 694.999 799.399 704.52 803.989C714.223 808.667 728.634 810.923 751.419 805.516L750.495 801.624Z" fill="#323330"/>
         -->
       </svg>
-    </div>
+    </section>
 
 
     <section class="about">
       <h2 id="sobre-mim" class="section-title">Sobre Mim</h2>
+      <p>&nbsp; &nbsp; Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nihil id commodi quibusdam laudantium rerum est consectetur dolorem obcaecati? Dolor, fugit error nihil tenetur eos officiis omnis optio reiciendis possimus.</p>
+      <p>&nbsp; &nbsp; Resumindo...</p>
       <main>
         <div class="about-card">
           <img class="about-card-img" src="assets/school.svg" alt="Universidade" />
-          <p>Estudo Ciência da Computação na <a  href="https://uenf.br/portal/" target="_blank" rel="noopener noreferrer">Universidade Estadual do Norte Fluminense Darcy Ribeiro (UENF)<i class="fa fa-external-link"></i></a>.</p>
+          <p>Estudo Ciência da Computação na <a href="https://uenf.br/portal/" target="_blank"
+              rel="noopener noreferrer">Universidade Estadual do Norte Fluminense Darcy Ribeiro (UENF)<i
+                class="fa fa-external-link"></i></a>.</p>
         </div>
         <div class="about-card">
           <img class="about-card-img" src="assets/coding.svg" alt="Programação" />
@@ -143,7 +148,7 @@
         </div>
       </main>
 
-      <a href="#" class="btn-outline">
+      <a href="#" class="btn btn-outline">
         <p>Clique aqui e saiba mais</p>
         <i class="fa fa-arrow-right"></i>
       </a>
@@ -173,12 +178,44 @@
 
     <section class="portfolio">
       <h2 class="section-title">Portfólio</h2>
-    </section>
-    
-    <section class="portfolio">
-      <h2 class="section-title">Portfólio</h2>
+      <h3>Em Breve! 🚧</h3>
     </section>
 
+    <section class="contact">
+      <h2 id="contato" class="section-title">Contato</h2>
+      <p>Tem algo a me dizer? Então mande-me um email:</p>
+      <form>
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name" placeholder="Seu nome..." required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Seu email..." required>
+        <label for="message">Mensagem</label>
+        <textarea name="" id="message" name="message" cols="30" rows="10" placeholder="Sua mensagem..."
+          required></textarea>
+        <button class="btn-send btn btn-primary" type="submit">
+          <p>Enviar</p>
+          <i class="fa fa-send"></i>
+        </button>
+      </form>
+    </section>
+
+    <footer>
+      <p> 2021 &copy Guilherme Tavares</p>
+      <div class="social-footer">
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/guilhermeomt" target="_blank" rel="noopener noreferrer">instagram</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/guilherme-tavares-3b65541a4/" target="_blank"
+              rel="noopener noreferrer">linkedin</a>
+          </li>
+          <li>
+            <a href="https://github.com/guilhermeomt" target="_blank" rel="noopener noreferrer">github</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
 
     <div class="skill-menus">
       <div class="skill-menu">
@@ -217,10 +254,6 @@
         </div>
       </div>
     </div>
-
-    <footer style="background-color: rgba(10, 10, 10, 0.5); height: 50px;">
-      <p>&copy Guilherme Tavares</p>
-    </footer>
   </body>
 
   <script src="scripts/main.js"></script>

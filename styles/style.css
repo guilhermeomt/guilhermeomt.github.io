@@ -28,7 +28,6 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  gap: 350px;
   position: relative;
   background-color: var(--bg-fallback);
   background: var(--bg-gradient), url("../../assets/line-in-motion.svg");
@@ -37,6 +36,26 @@ body {
   font-family: "Lexend Deca", sans-serif;
   animation: bg-scrolling 20s linear infinite;
 }
+
+body>section {
+  margin-bottom: 350px;
+}
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+}
+
 
 a {
   color: var(--text-white);
@@ -150,33 +169,6 @@ p>a:hover {
   animation: gradient-hover 1.5s infinite ease-in-out alternate-reverse;
 }
 
-.nav-item:nth-of-type(2)::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  margin-left: -5px;
-  border-bottom: 5px solid (255, 0, 0, 0.8);
-  border-bottom: 5px solid rgba(255, 0, 0, 0.8);
-  border-right: 5px solid transparent;
-  border-left: 5px solid transparent;
-  z-index: -1;
-}
-
-.nav-item:nth-of-type(2)::after {
-  content: "Em Breve!";
-  bottom: -16px;
-  right: 34%;
-  border-radius: 15px;
-  font-size: 8px;
-  position: absolute;
-  color: white;
-  padding: 3px;
-  background-image: linear-gradient(rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0.8));
-  cursor: initial;
-  z-index: 100;
-}
-
 .nav-item:nth-of-type(4) {
   margin-bottom: 40px;
 }
@@ -221,7 +213,7 @@ main>h2 {
   font-size: 32px;
   font-weight: normal;
   text-align: center;
-  margin-bottom: 36px;
+  margin-bottom: 40px;
 }
 
 /* main > h2::after {
@@ -342,6 +334,7 @@ main>i {
 
 .skill-menus {
   width: 0;
+  height: 0;
 }
 
 .skill-menu {
@@ -389,6 +382,7 @@ main>i {
   position: relative;
   padding: 30px 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   background: #2a2835;
   margin-top: 35px;
@@ -422,9 +416,20 @@ main>i {
   color: #2A2835;
 }
 
+.about>p {
+  padding: 0 320px;
+  line-height: 22px;
+  align-self: flex-start;
+  margin-bottom: 10px;
+}
+
+.about>p:last-child {
+  margin-bottom: 0;
+}
+
 .about>main {
   width: 100%;
-  padding: 50px 40px;
+  padding: 20px 40px 50px 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -490,19 +495,6 @@ main>i {
   padding: 0 15px;
 }
 
-.about>.btn-outline {
-  width: 200px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  gap: 15px;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  bottom: 0px;
-  z-index: 1;
-}
-
 /* Blog */
 
 .blog {
@@ -551,7 +543,7 @@ main>i {
 
 .portfolio {
   position: relative;
-  padding: 100px 0;
+  padding: 140px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -568,23 +560,169 @@ main>i {
   color: #2A2835;
 }
 
+.portfolio>h3 {
+  font-size: 36px;
+}
+
+/* Contact */
+
+.contact {
+  position: relative;
+  padding: 40px;
+  margin-top: -45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: flex-end;
+  background-color: #1B1D20;
+  width: 100%;
+  border-top-left-radius: 35%;
+  border-top-right-radius: 35%;
+  margin-bottom: 0;
+}
+
+.contact::after {
+  content: "";
+  width: 100%;
+  height: 750px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../assets/bg-contact.svg") no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.contact>h2 {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translate(-50%);
+  color: #1B1D20;
+}
+
+.contact>p {
+  margin: 40px 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  align-self: flex-start;
+  margin-bottom: 5px;
+  color: #fff;
+  display: block;
+}
+
+input, textarea {
+  background-color: #1B1D20;
+  padding: 10px 5px;
+  border: 0;
+  border-bottom: 3px solid #2a2835;
+  transition: .3s;
+  color: #fff;
+  font-size: 1.1rem;
+  width: 100%;
+  min-width: 350px;
+  margin-bottom: 40px;
+  font-family: "Raleway", sans-serif;
+}
+
+input:valid {
+  border-color: #00f70033;
+}
+
+input {
+  max-width: 400px;
+}
+
+textarea {
+  max-width: 400px;
+  min-height: 250px;
+  max-height: 250px;
+}
+
+input::placeholder, textarea::placeholder {
+  font-size: 14px;
+  color: #c4c4c477;
+  letter-spacing: .1rem;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #f7000066;
+}
+
+/* Footer */
+
+footer {
+  width: 100%;
+  height: 30px;
+  background: #f7000099;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li {
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+footer ul li:not(:last-child) {
+  margin-right: 15px;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+} 
+
 /* Components */
 
-.btn-outline {
-  width: 200px;
+.btn {
+  min-width: 100px;
+  max-width: 200px;
   height: 40px;
-  font-size: 14px;
-  line-height: 16px;
+  padding: 25px 30px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
   text-align: center;
-  border: 2px solid white;
-  border-radius: 50px;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 25px 30px;
   letter-spacing: 0;
-  transition: all 0.2s linear;
+  font-size: 14px;
+  line-height: 16px;
   cursor: pointer;
-  min-width: 100px;
+  transition: all 0.2s linear;
+}
+
+.btn-primary {
+  background: #282A2D;
+  border-radius: 8px;
+}
+
+.btn-primary:hover {
+  opacity: .95;
+  box-shadow: 0 0 0 3px #282A2D;
+}
+
+
+.btn-outline {
+  border: 2px solid white;
+  border-radius: 8px;
 }
 
 .btn-outline:hover {
